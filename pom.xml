@@ -1,0 +1,104 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.lc.df.kafka</groupId>
+  <artifactId>kafka-load-generator</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+  	<kafka-client-version>1.0.0</kafka-client-version>
+  	<junit-version>4.11</junit-version>
+  	<commons-io-version>2.5</commons-io-version>
+  	<log4j-version>1.2.15</log4j-version>
+  </properties>
+  
+  <dependencies>
+
+	  <dependency>
+		  <groupId>org.springframework.kafka</groupId>
+		  <artifactId>spring-kafka</artifactId>
+		  <version>2.1.0.RELEASE</version>
+	  </dependency>
+	<dependency>
+	    <groupId>junit</groupId> 
+	    <artifactId>junit</artifactId>
+	    <version>${junit-version}</version>
+	    <scope>test</scope> 
+	</dependency>
+	<dependency>
+	    <groupId>log4j</groupId>
+	    <artifactId>log4j</artifactId>
+	    <version>${log4j-version}</version>
+	    <exclusions>
+	    	<exclusion>
+	    		<groupId>com.sun.jdmk</groupId>
+	    		<artifactId>jmxtools</artifactId>
+	    	</exclusion>
+	    	<exclusion>
+				<groupId>com.sun.jmx</groupId>
+				<artifactId>jmxri</artifactId>
+	    	</exclusion>
+	    	<exclusion>
+	    		<groupId>javax.jms</groupId>
+	    		<artifactId>jms</artifactId>
+	    	</exclusion>
+	    	<exclusion>
+	    		<groupId>javax.mail</groupId>
+	    		<artifactId>mail</artifactId>
+	    	</exclusion>
+	    </exclusions>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.kafka</groupId>
+	    <artifactId>kafka_2.12</artifactId>
+	    <version>${kafka-client-version}</version>
+	</dependency>
+    <dependency>
+	    <groupId>commons-io</groupId>
+	    <artifactId>commons-io</artifactId>
+	    <version>${commons-io-version}</version>
+	</dependency>
+  </dependencies>
+  
+  <build>
+	<plugins>
+	 
+	 <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      
+	
+    <plugin>
+      <artifactId>maven-assembly-plugin</artifactId>
+      <configuration>
+        <archive>
+          <manifest>
+            <mainClass>com.lc.df.kafka.client.KafkaClient</mainClass>
+          </manifest>
+        </archive>
+        <descriptorRefs>
+          <descriptorRef>jar-with-dependencies</descriptorRef>
+        </descriptorRefs>
+      </configuration>
+      <executions>
+	    <execution>
+	      <id>make-assembly</id> <!-- this is used for inheritance merges -->
+	      <phase>package</phase> <!-- bind to the packaging phase -->
+	      <goals>
+	        <goal>single</goal>
+	      </goals>
+	    </execution>
+  	</executions>
+    </plugin>
+    
+  </plugins>
+      
+	  
+  </build>
+
+</project>

@@ -1,0 +1,17 @@
+{
+"event": {
+      "eventKey": "${event}",
+      "isEventResulted": "true",
+      "isEventFinished": "true",
+      "isEventSettled": "true"
+   },
+    "meta": {
+     "operation": "update",
+     "parents": "${toplevel}",
+     "messageID": "${messageid}",
+     "channel": "OXIRep",
+     "source": "Amelco",
+     "recordModifiedTime": "${recordModifiedTime}"
+   }
+
+}

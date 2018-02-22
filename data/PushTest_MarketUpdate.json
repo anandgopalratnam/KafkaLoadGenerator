@@ -1,0 +1,15 @@
+{
+"market": {
+      "marketKey": "${market}",
+      "marketStatus": "${marketStatus}"
+    },
+    "meta": {
+     "operation": "update",
+     "parents": "${toplevel}:e.${event}",
+     "messageID": "${messageid}",
+     "channel": "OXIRep",
+     "source": "Amelco",
+     "recordModifiedTime": "${recordModifiedTime}"
+   }
+
+}

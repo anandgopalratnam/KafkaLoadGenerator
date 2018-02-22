@@ -1,0 +1,33 @@
+{
+"event": {
+      "eventKey": "${event}",
+      "eventName": "|Team A| |vs| |Team B|",
+      "eventStatus": "Suspended",
+      "displayStatus": "NotDisplayed",
+      "displayOrder": -9999,
+      "hasBIRMarkets": "false",
+      "channel": [
+        "R",
+        "I",
+        "P",
+        "C",
+        "M",
+        "Q",
+        "K"
+      ],
+      "eventSort": "MTCH",
+      "eventDateTime": "2017-07-02T12:00:00.001Z",
+      "isEventFinished": "false",
+      "betMaxStake": 10000.00,
+      "betMinStake": 0.10,
+      "isCashoutAvailable": "true"
+    },
+    "meta": {
+     "operation": "create",
+     "parents": "${toplevel}",
+     "messageID": "${messageid}",
+     "channel": "OXIRep",
+     "source": "Amelco",
+     "recordModifiedTime": "${recordModifiedTime}"
+   }
+}

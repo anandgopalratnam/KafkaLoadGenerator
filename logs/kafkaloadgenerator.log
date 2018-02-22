@@ -1,0 +1,257 @@
+[main][22 Feb 2018 21:05:24,665] INFO   - Using properties file: ./config/kafkaclient.properties
+[main][22 Feb 2018 21:05:24,668] INFO   - client.TPS: 1000
+[main][22 Feb 2018 21:05:24,668] INFO   - client.maxtime: 300
+[main][22 Feb 2018 21:05:24,668] INFO   - client.producer.payload.size.bytes: 2000
+[main][22 Feb 2018 21:05:24,668] INFO   - client.producer.payload.file: 
+[main][22 Feb 2018 21:05:24,668] INFO   - client.producer.payload.dir: ./data
+[main][22 Feb 2018 21:05:24,668] INFO   - client.producer.payload.fileprefix: PushTest_
+[main][22 Feb 2018 21:05:24,668] INFO   - client.producer.threads: 10
+[main][22 Feb 2018 21:05:24,668] INFO   - client.listener.threads: 4
+[main][22 Feb 2018 21:05:24,669] INFO   - client.listener.timeout.millis: 10000
+[main][22 Feb 2018 21:05:24,669] INFO   - stats.file.enabled: true
+[main][22 Feb 2018 21:05:24,669] INFO   - stats.file.name: ./logs/stats_client_kafka.csv
+[main][22 Feb 2018 21:05:24,669] INFO   - stats.interval.millis: 1000
+[main][22 Feb 2018 21:05:24,669] INFO   - kafka.bootstrap.servers: localhost:9092
+[main][22 Feb 2018 21:05:24,669] INFO   - kafka.topic: sportsbook.load.1
+[main][22 Feb 2018 21:05:24,669] INFO   - kafka.compressiontype: snappy
+[main][22 Feb 2018 21:05:24,669] INFO   - kafka.listener.groupName: netty.loadtest.consumer
+[main][22 Feb 2018 21:05:24,670] INFO   - kafka.listener.maxpollrecords: 10
+[main][22 Feb 2018 21:05:24,670] INFO   - client.producer.payload.eventid.min:200
+[main][22 Feb 2018 21:05:24,670] INFO   - client.producer.payload.eventid.max: 205
+[main][22 Feb 2018 21:05:24,670] INFO   - client.producer.payload.marketid.prefix.min: 70
+[main][22 Feb 2018 21:05:24,670] INFO   - client.producer.payload.marketid.prefix.max: 71
+[main][22 Feb 2018 21:05:24,670] INFO   - client.producer.payload.selectionid.prefix.min: 80
+[main][22 Feb 2018 21:05:24,670] INFO   - client.producer.payload.selectionid.prefix.max: 82
+[main][22 Feb 2018 21:05:24,670] INFO   - client.producer.payload.selection.priceupdate.multiplier: 8
+[main][22 Feb 2018 21:05:24,670] INFO   - client.producer.inplaytime: 100
+[main][22 Feb 2018 21:05:24,671] INFO   - client.producer.resulttime: 250
+[main][22 Feb 2018 21:05:24,671] INFO   - TopLevelList: [c.16:cl.97:t.442, c.16:cl.97:t.442, c.34:cl.266:t.10449, c.6:cl.13:t.35, c.6:cl.13:t.35, c.10:cl.58:t.162, c.10:cl.58:t.162]
+[main][22 Feb 2018 21:05:24,939] INFO   - Consumer 0 ready!
+[main][22 Feb 2018 21:05:24,972] INFO   - ResponseHandler 0 ready!
+[main][22 Feb 2018 21:05:24,972] INFO   - Consumer 1 ready!
+[main][22 Feb 2018 21:05:24,977] INFO   - ResponseHandler 1 ready!
+[main][22 Feb 2018 21:05:24,977] INFO   - Consumer 2 ready!
+[main][22 Feb 2018 21:05:24,982] INFO   - ResponseHandler 2 ready!
+[main][22 Feb 2018 21:05:24,983] INFO   - Consumer 3 ready!
+[main][22 Feb 2018 21:05:24,987] INFO   - ResponseHandler 3 ready!
+[main][22 Feb 2018 21:05:24,987] INFO   - Sleeping for 5 seconds to allow consumers to initialise........
+[Thread-12][22 Feb 2018 21:05:29,991] INFO   - Sender 0 started, max: 30000
+[Thread-32][22 Feb 2018 21:05:29,994] INFO   - Stats: TPS(avg):0, TPS(last):0, TIME: 0, sent:0, ok:0, error:0(c/t/d/o: 0/0/0/0), avg_latency:0
+[Thread-14][22 Feb 2018 21:05:30,096] INFO   - Sender 1 started, max: 30000
+[Thread-16][22 Feb 2018 21:05:30,192] INFO   - Sender 2 started, max: 30000
+[Thread-18][22 Feb 2018 21:05:30,296] INFO   - Sender 3 started, max: 30000
+[Thread-20][22 Feb 2018 21:05:30,395] INFO   - Sender 4 started, max: 30000
+[Thread-22][22 Feb 2018 21:05:30,494] INFO   - Sender 5 started, max: 30000
+[Thread-24][22 Feb 2018 21:05:30,594] INFO   - Sender 6 started, max: 30000
+[Thread-26][22 Feb 2018 21:05:30,695] INFO   - Sender 7 started, max: 30000
+[Thread-28][22 Feb 2018 21:05:30,795] INFO   - Sender 8 started, max: 30000
+[Thread-30][22 Feb 2018 21:05:30,894] INFO   - Sender 9 started, max: 30000
+[Thread-32][22 Feb 2018 21:05:30,999] INFO   - Stats: TPS(avg):1006, TPS(last):1011, TIME: 1005, sent:1011, ok:0, error:0(c/t/d/o: 0/0/0/0), avg_latency:0
+[Thread-32][22 Feb 2018 21:05:32,004] INFO   - Stats: TPS(avg):1009, TPS(last):1017, TIME: 2010, sent:2028, ok:0, error:0(c/t/d/o: 0/0/0/0), avg_latency:0
+[Thread-32][22 Feb 2018 21:05:33,007] INFO   - Stats: TPS(avg):996, TPS(last):972, TIME: 3012, sent:3000, ok:0, error:0(c/t/d/o: 0/0/0/0), avg_latency:0
+[Thread-32][22 Feb 2018 21:05:34,010] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 4016, sent:4000, ok:0, error:0(c/t/d/o: 0/0/700/0), avg_latency:0
+[Thread-32][22 Feb 2018 21:05:35,016] INFO   - Stats: TPS(avg):996, TPS(last):1002, TIME: 5022, sent:5002, ok:0, error:0(c/t/d/o: 0/0/1700/0), avg_latency:0
+[Thread-32][22 Feb 2018 21:05:36,019] INFO   - Stats: TPS(avg):996, TPS(last):998, TIME: 6025, sent:6000, ok:0, error:0(c/t/d/o: 0/0/2700/0), avg_latency:0
+[Thread-32][22 Feb 2018 21:05:37,023] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 7029, sent:7000, ok:0, error:0(c/t/d/o: 0/0/3700/0), avg_latency:0
+[Thread-32][22 Feb 2018 21:05:38,027] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 8033, sent:8000, ok:0, error:0(c/t/d/o: 0/0/4700/0), avg_latency:0
+[Thread-32][22 Feb 2018 21:05:39,032] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 9037, sent:9000, ok:0, error:0(c/t/d/o: 0/0/5700/0), avg_latency:0
+[Thread-32][22 Feb 2018 21:05:40,032] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 10038, sent:10000, ok:0, error:0(c/t/d/o: 0/0/6700/0), avg_latency:0
+[Thread-32][22 Feb 2018 21:05:41,034] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 11040, sent:11000, ok:0, error:0(c/t/d/o: 0/0/7700/0), avg_latency:0
+[Thread-32][22 Feb 2018 21:05:42,038] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 12044, sent:12000, ok:0, error:0(c/t/d/o: 0/0/8700/0), avg_latency:0
+[Thread-32][22 Feb 2018 21:05:43,042] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 13048, sent:13000, ok:0, error:0(c/t/d/o: 0/0/9700/0), avg_latency:0
+[Thread-32][22 Feb 2018 21:05:44,046] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 14052, sent:14000, ok:0, error:0(c/t/d/o: 0/0/10700/0), avg_latency:0
+[Thread-32][22 Feb 2018 21:05:45,050] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 15056, sent:15000, ok:0, error:0(c/t/d/o: 0/0/11700/0), avg_latency:0
+[Thread-32][22 Feb 2018 21:05:46,054] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 16060, sent:16000, ok:0, error:0(c/t/d/o: 0/0/12700/0), avg_latency:0
+[Thread-32][22 Feb 2018 21:05:47,058] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 17064, sent:17000, ok:0, error:0(c/t/d/o: 0/0/13700/0), avg_latency:0
+[Thread-32][22 Feb 2018 21:05:48,066] INFO   - Stats: TPS(avg):1001, TPS(last):1089, TIME: 18072, sent:18089, ok:0, error:0(c/t/d/o: 0/0/14710/0), avg_latency:0
+[Thread-32][22 Feb 2018 21:05:49,071] INFO   - Stats: TPS(avg):1001, TPS(last):1011, TIME: 19077, sent:19100, ok:0, error:0(c/t/d/o: 0/0/15718/0), avg_latency:0
+[Thread-0][22 Feb 2018 21:05:49,447] INFO   - stats1: TPS(avg):997, TPS(last):190230, TIME: 190740, sent:190230, ok:0, error:0(c/t/d/o: 0/0/131228/0), avg_latency:0
+[Thread-0][22 Feb 2018 21:05:49,448] INFO   - stats: TPS(avg):997, TPS(last):300, TIME: 19453, sent:19400, ok:0, error:0(c/t/d/o: 0/0/16100/0), avg_latency:0
+[main][22 Feb 2018 21:09:30,995] INFO   - Using properties file: ./config/kafkaclient.properties
+[main][22 Feb 2018 21:09:30,998] INFO   - client.TPS: 1000
+[main][22 Feb 2018 21:09:30,998] INFO   - client.maxtime: 300
+[main][22 Feb 2018 21:09:30,998] INFO   - client.producer.payload.size.bytes: 2000
+[main][22 Feb 2018 21:09:30,998] INFO   - client.producer.payload.file: 
+[main][22 Feb 2018 21:09:30,998] INFO   - client.producer.payload.dir: ./data
+[main][22 Feb 2018 21:09:30,998] INFO   - client.producer.payload.fileprefix: PushTest_
+[main][22 Feb 2018 21:09:30,998] INFO   - client.producer.threads: 10
+[main][22 Feb 2018 21:09:30,999] INFO   - client.listener.threads: 4
+[main][22 Feb 2018 21:09:30,999] INFO   - client.listener.timeout.millis: 10000
+[main][22 Feb 2018 21:09:30,999] INFO   - stats.file.enabled: true
+[main][22 Feb 2018 21:09:30,999] INFO   - stats.file.name: ./logs/stats_client_kafka.csv
+[main][22 Feb 2018 21:09:30,999] INFO   - stats.interval.millis: 1000
+[main][22 Feb 2018 21:09:30,999] INFO   - kafka.bootstrap.servers: localhost:9092
+[main][22 Feb 2018 21:09:30,999] INFO   - kafka.topic: sportsbook.load.1
+[main][22 Feb 2018 21:09:30,999] INFO   - kafka.compressiontype: snappy
+[main][22 Feb 2018 21:09:30,999] INFO   - kafka.listener.groupName: netty.loadtest.consumer
+[main][22 Feb 2018 21:09:30,999] INFO   - kafka.listener.maxpollrecords: 10
+[main][22 Feb 2018 21:09:30,999] INFO   - client.producer.payload.eventid.min:200
+[main][22 Feb 2018 21:09:30,999] INFO   - client.producer.payload.eventid.max: 205
+[main][22 Feb 2018 21:09:30,999] INFO   - client.producer.payload.marketid.prefix.min: 70
+[main][22 Feb 2018 21:09:31,000] INFO   - client.producer.payload.marketid.prefix.max: 71
+[main][22 Feb 2018 21:09:31,000] INFO   - client.producer.payload.selectionid.prefix.min: 80
+[main][22 Feb 2018 21:09:31,000] INFO   - client.producer.payload.selectionid.prefix.max: 82
+[main][22 Feb 2018 21:09:31,000] INFO   - client.producer.payload.selection.priceupdate.multiplier: 8
+[main][22 Feb 2018 21:09:31,000] INFO   - client.producer.inplaytime: 100
+[main][22 Feb 2018 21:09:31,000] INFO   - client.producer.resulttime: 250
+[main][22 Feb 2018 21:09:31,000] INFO   - TopLevelList: [c.16:cl.97:t.442, c.16:cl.97:t.442, c.34:cl.266:t.10449, c.6:cl.13:t.35, c.6:cl.13:t.35, c.10:cl.58:t.162, c.10:cl.58:t.162]
+[main][22 Feb 2018 21:09:31,274] INFO   - Consumer 0 ready!
+[main][22 Feb 2018 21:09:31,321] INFO   - ResponseHandler 0 ready!
+[main][22 Feb 2018 21:09:31,321] INFO   - Consumer 1 ready!
+[main][22 Feb 2018 21:09:31,325] INFO   - ResponseHandler 1 ready!
+[main][22 Feb 2018 21:09:31,325] INFO   - Consumer 2 ready!
+[main][22 Feb 2018 21:09:31,329] INFO   - ResponseHandler 2 ready!
+[main][22 Feb 2018 21:09:31,329] INFO   - Consumer 3 ready!
+[main][22 Feb 2018 21:09:31,333] INFO   - ResponseHandler 3 ready!
+[main][22 Feb 2018 21:09:31,334] INFO   - Sleeping for 5 seconds to allow consumers to initialise........
+[Thread-12][22 Feb 2018 21:09:31,590] INFO   - Stats: TPS(avg):0, TPS(last):0, TIME: 1519333771591, sent:0, ok:0, error:0(c/t/d/o: 0/0/8/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:32,595] INFO   - Stats: TPS(avg):0, TPS(last):0, TIME: 1519333772596, sent:0, ok:0, error:0(c/t/d/o: 0/0/1190/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:33,598] INFO   - Stats: TPS(avg):0, TPS(last):0, TIME: 1519333773599, sent:0, ok:0, error:0(c/t/d/o: 0/0/1190/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:34,600] INFO   - Stats: TPS(avg):0, TPS(last):0, TIME: 1519333774601, sent:0, ok:0, error:0(c/t/d/o: 0/0/1190/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:35,604] INFO   - Stats: TPS(avg):0, TPS(last):0, TIME: 1519333775605, sent:0, ok:0, error:0(c/t/d/o: 0/0/1190/0), avg_latency:0
+[Thread-14][22 Feb 2018 21:09:36,337] INFO   - Sender 0 started, max: 30000
+[Thread-16][22 Feb 2018 21:09:36,440] INFO   - Sender 1 started, max: 30000
+[Thread-18][22 Feb 2018 21:09:36,541] INFO   - Sender 2 started, max: 30000
+[Thread-12][22 Feb 2018 21:09:36,609] INFO   - Stats: TPS(avg):1107, TPS(last):300, TIME: 271, sent:300, ok:0, error:0(c/t/d/o: 0/0/1490/0), avg_latency:0
+[Thread-20][22 Feb 2018 21:09:36,641] INFO   - Sender 3 started, max: 30000
+[Thread-22][22 Feb 2018 21:09:36,741] INFO   - Sender 4 started, max: 30000
+[Thread-24][22 Feb 2018 21:09:36,842] INFO   - Sender 5 started, max: 30000
+[Thread-26][22 Feb 2018 21:09:36,942] INFO   - Sender 6 started, max: 30000
+[Thread-28][22 Feb 2018 21:09:37,062] INFO   - Sender 7 started, max: 30000
+[Thread-30][22 Feb 2018 21:09:37,142] INFO   - Sender 8 started, max: 30000
+[Thread-32][22 Feb 2018 21:09:37,241] INFO   - Sender 9 started, max: 30000
+[Thread-12][22 Feb 2018 21:09:37,613] INFO   - Stats: TPS(avg):1020, TPS(last):1000, TIME: 1274, sent:1300, ok:0, error:0(c/t/d/o: 0/0/2490/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:38,614] INFO   - Stats: TPS(avg):1011, TPS(last):1000, TIME: 2276, sent:2300, ok:0, error:0(c/t/d/o: 0/0/3490/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:39,619] INFO   - Stats: TPS(avg):1006, TPS(last):1000, TIME: 3281, sent:3300, ok:0, error:0(c/t/d/o: 0/0/4490/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:40,621] INFO   - Stats: TPS(avg):1004, TPS(last):1000, TIME: 4283, sent:4300, ok:0, error:0(c/t/d/o: 0/0/5490/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:41,626] INFO   - Stats: TPS(avg):1002, TPS(last):1000, TIME: 5288, sent:5300, ok:0, error:0(c/t/d/o: 0/0/6490/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:42,631] INFO   - Stats: TPS(avg):1001, TPS(last):1000, TIME: 6293, sent:6300, ok:0, error:0(c/t/d/o: 0/0/7490/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:43,635] INFO   - Stats: TPS(avg):1000, TPS(last):1000, TIME: 7297, sent:7300, ok:0, error:0(c/t/d/o: 0/0/8490/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:44,639] INFO   - Stats: TPS(avg):1000, TPS(last):1000, TIME: 8301, sent:8300, ok:0, error:0(c/t/d/o: 0/0/9490/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:45,643] INFO   - Stats: TPS(avg):999, TPS(last):1000, TIME: 9305, sent:9300, ok:0, error:0(c/t/d/o: 0/0/10490/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:46,643] INFO   - Stats: TPS(avg):1000, TPS(last):1000, TIME: 10305, sent:10300, ok:0, error:0(c/t/d/o: 0/0/11490/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:47,647] INFO   - Stats: TPS(avg):999, TPS(last):1000, TIME: 11309, sent:11300, ok:0, error:0(c/t/d/o: 0/0/12490/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:48,651] INFO   - Stats: TPS(avg):999, TPS(last):1000, TIME: 12313, sent:12300, ok:0, error:0(c/t/d/o: 0/0/13490/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:49,655] INFO   - Stats: TPS(avg):999, TPS(last):1000, TIME: 13317, sent:13300, ok:0, error:0(c/t/d/o: 0/0/14490/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:50,660] INFO   - Stats: TPS(avg):998, TPS(last):1000, TIME: 14322, sent:14300, ok:0, error:0(c/t/d/o: 0/0/15490/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:51,666] INFO   - Stats: TPS(avg):998, TPS(last):1000, TIME: 15328, sent:15300, ok:0, error:0(c/t/d/o: 0/0/16490/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:52,670] INFO   - Stats: TPS(avg):998, TPS(last):1000, TIME: 16332, sent:16300, ok:0, error:0(c/t/d/o: 0/0/17490/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:53,672] INFO   - Stats: TPS(avg):998, TPS(last):1000, TIME: 17334, sent:17300, ok:0, error:0(c/t/d/o: 0/0/18490/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:54,676] INFO   - Stats: TPS(avg):998, TPS(last):1000, TIME: 18338, sent:18300, ok:0, error:0(c/t/d/o: 0/0/19490/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:09:55,680] INFO   - Stats: TPS(avg):998, TPS(last):1000, TIME: 19342, sent:19300, ok:0, error:0(c/t/d/o: 0/0/20490/0), avg_latency:0
+[Thread-0][22 Feb 2018 21:09:56,388] INFO   - stats1: TPS(avg):0, TPS(last):196000, TIME: 7596669064101, sent:196000, ok:0, error:0(c/t/d/o: 0/0/224566/0), avg_latency:0
+[Thread-0][22 Feb 2018 21:09:56,389] INFO   - stats: TPS(avg):997, TPS(last):700, TIME: 20051, sent:20000, ok:0, error:0(c/t/d/o: 0/0/21190/0), avg_latency:0
+[main][22 Feb 2018 21:12:11,921] INFO   - Using properties file: ./config/kafkaclient.properties
+[main][22 Feb 2018 21:12:11,924] INFO   - client.TPS: 1000
+[main][22 Feb 2018 21:12:11,924] INFO   - client.maxtime: 300
+[main][22 Feb 2018 21:12:11,924] INFO   - client.producer.payload.size.bytes: 2000
+[main][22 Feb 2018 21:12:11,924] INFO   - client.producer.payload.file: 
+[main][22 Feb 2018 21:12:11,924] INFO   - client.producer.payload.dir: ./data
+[main][22 Feb 2018 21:12:11,924] INFO   - client.producer.payload.fileprefix: PushTest_
+[main][22 Feb 2018 21:12:11,924] INFO   - client.producer.threads: 10
+[main][22 Feb 2018 21:12:11,924] INFO   - client.listener.threads: 4
+[main][22 Feb 2018 21:12:11,924] INFO   - client.listener.timeout.millis: 10000
+[main][22 Feb 2018 21:12:11,924] INFO   - stats.file.enabled: true
+[main][22 Feb 2018 21:12:11,924] INFO   - stats.file.name: ./logs/stats_client_kafka.csv
+[main][22 Feb 2018 21:12:11,925] INFO   - stats.interval.millis: 1000
+[main][22 Feb 2018 21:12:11,925] INFO   - kafka.bootstrap.servers: localhost:9092
+[main][22 Feb 2018 21:12:11,925] INFO   - kafka.topic: sportsbook.load.1
+[main][22 Feb 2018 21:12:11,925] INFO   - kafka.compressiontype: snappy
+[main][22 Feb 2018 21:12:11,925] INFO   - kafka.listener.groupName: netty.loadtest.consumer
+[main][22 Feb 2018 21:12:11,925] INFO   - kafka.listener.maxpollrecords: 10
+[main][22 Feb 2018 21:12:11,925] INFO   - client.producer.payload.eventid.min:200
+[main][22 Feb 2018 21:12:11,925] INFO   - client.producer.payload.eventid.max: 205
+[main][22 Feb 2018 21:12:11,925] INFO   - client.producer.payload.marketid.prefix.min: 70
+[main][22 Feb 2018 21:12:11,925] INFO   - client.producer.payload.marketid.prefix.max: 71
+[main][22 Feb 2018 21:12:11,925] INFO   - client.producer.payload.selectionid.prefix.min: 80
+[main][22 Feb 2018 21:12:11,926] INFO   - client.producer.payload.selectionid.prefix.max: 82
+[main][22 Feb 2018 21:12:11,926] INFO   - client.producer.payload.selection.priceupdate.multiplier: 8
+[main][22 Feb 2018 21:12:11,926] INFO   - client.producer.inplaytime: 100
+[main][22 Feb 2018 21:12:11,926] INFO   - client.producer.resulttime: 250
+[main][22 Feb 2018 21:12:11,926] INFO   - TopLevelList: [c.16:cl.97:t.442, c.16:cl.97:t.442, c.34:cl.266:t.10449, c.6:cl.13:t.35, c.6:cl.13:t.35, c.10:cl.58:t.162, c.10:cl.58:t.162]
+[main][22 Feb 2018 21:12:12,191] INFO   - Consumer 0 ready!
+[main][22 Feb 2018 21:12:12,223] INFO   - ResponseHandler 0 ready!
+[main][22 Feb 2018 21:12:12,223] INFO   - Consumer 1 ready!
+[main][22 Feb 2018 21:12:12,227] INFO   - ResponseHandler 1 ready!
+[main][22 Feb 2018 21:12:12,228] INFO   - Consumer 2 ready!
+[main][22 Feb 2018 21:12:12,231] INFO   - ResponseHandler 2 ready!
+[main][22 Feb 2018 21:12:12,232] INFO   - Consumer 3 ready!
+[main][22 Feb 2018 21:12:12,235] INFO   - ResponseHandler 3 ready!
+[main][22 Feb 2018 21:12:12,235] INFO   - Sleeping for 5 seconds to allow consumers to initialise........
+[Thread-12][22 Feb 2018 21:12:12,481] INFO   - Stats: TPS(avg):0, TPS(last):0, TIME: 1519333932481, sent:0, ok:0, error:0(c/t/d/o: 0/0/11/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:12:13,485] INFO   - Stats: TPS(avg):0, TPS(last):0, TIME: 1519333933486, sent:0, ok:0, error:0(c/t/d/o: 0/0/4605/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:12:14,489] INFO   - Stats: TPS(avg):0, TPS(last):0, TIME: 1519333934490, sent:0, ok:0, error:0(c/t/d/o: 0/0/4800/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:12:15,494] INFO   - Stats: TPS(avg):0, TPS(last):0, TIME: 1519333935494, sent:0, ok:0, error:0(c/t/d/o: 0/0/4800/0), avg_latency:0
+[Thread-0][22 Feb 2018 21:12:15,899] INFO   - stats1: TPS(avg):0, TPS(last):0, TIME: 6077335735951, sent:0, ok:0, error:0(c/t/d/o: 0/0/14214/0), avg_latency:0
+[Thread-0][22 Feb 2018 21:12:15,899] INFO   - stats: TPS(avg):0, TPS(last):0, TIME: 1519333935900, sent:0, ok:0, error:0(c/t/d/o: 0/0/4800/0), avg_latency:0
+[main][22 Feb 2018 21:26:15,760] INFO   - Using properties file: ./config/kafkaclient.properties
+[main][22 Feb 2018 21:26:15,762] INFO   - client.TPS: 1000
+[main][22 Feb 2018 21:26:15,762] INFO   - client.maxtime: 300
+[main][22 Feb 2018 21:26:15,762] INFO   - client.producer.payload.size.bytes: 2000
+[main][22 Feb 2018 21:26:15,762] INFO   - client.producer.payload.file: 
+[main][22 Feb 2018 21:26:15,762] INFO   - client.producer.payload.dir: ./data
+[main][22 Feb 2018 21:26:15,762] INFO   - client.producer.payload.fileprefix: PushTest_
+[main][22 Feb 2018 21:26:15,762] INFO   - client.producer.threads: 10
+[main][22 Feb 2018 21:26:15,762] INFO   - client.listener.threads: 4
+[main][22 Feb 2018 21:26:15,763] INFO   - client.listener.timeout.millis: 10000
+[main][22 Feb 2018 21:26:15,763] INFO   - stats.file.enabled: true
+[main][22 Feb 2018 21:26:15,763] INFO   - stats.file.name: ./logs/stats_client_kafka.csv
+[main][22 Feb 2018 21:26:15,763] INFO   - stats.interval.millis: 1000
+[main][22 Feb 2018 21:26:15,763] INFO   - kafka.bootstrap.servers: localhost:9092
+[main][22 Feb 2018 21:26:15,763] INFO   - kafka.topic: sportsbook.load.1
+[main][22 Feb 2018 21:26:15,763] INFO   - kafka.compressiontype: snappy
+[main][22 Feb 2018 21:26:15,763] INFO   - kafka.listener.groupName: netty.loadtest.consumer
+[main][22 Feb 2018 21:26:15,763] INFO   - kafka.listener.maxpollrecords: 10
+[main][22 Feb 2018 21:26:15,763] INFO   - client.producer.payload.eventid.min:200
+[main][22 Feb 2018 21:26:15,763] INFO   - client.producer.payload.eventid.max: 205
+[main][22 Feb 2018 21:26:15,763] INFO   - client.producer.payload.marketid.prefix.min: 70
+[main][22 Feb 2018 21:26:15,763] INFO   - client.producer.payload.marketid.prefix.max: 71
+[main][22 Feb 2018 21:26:15,763] INFO   - client.producer.payload.selectionid.prefix.min: 80
+[main][22 Feb 2018 21:26:15,764] INFO   - client.producer.payload.selectionid.prefix.max: 82
+[main][22 Feb 2018 21:26:15,764] INFO   - client.producer.payload.selection.priceupdate.multiplier: 8
+[main][22 Feb 2018 21:26:15,764] INFO   - client.producer.inplaytime: 100
+[main][22 Feb 2018 21:26:15,764] INFO   - client.producer.resulttime: 250
+[main][22 Feb 2018 21:26:15,764] INFO   - TopLevelList: [c.16:cl.97:t.442, c.16:cl.97:t.442, c.34:cl.266:t.10449, c.6:cl.13:t.35, c.6:cl.13:t.35, c.10:cl.58:t.162, c.10:cl.58:t.162]
+[main][22 Feb 2018 21:26:16,040] INFO   - Consumer 0 ready!
+[main][22 Feb 2018 21:26:16,073] INFO   - ResponseHandler 0 ready!
+[main][22 Feb 2018 21:26:16,073] INFO   - Consumer 1 ready!
+[main][22 Feb 2018 21:26:16,078] INFO   - ResponseHandler 1 ready!
+[main][22 Feb 2018 21:26:16,079] INFO   - Consumer 2 ready!
+[main][22 Feb 2018 21:26:16,083] INFO   - ResponseHandler 2 ready!
+[main][22 Feb 2018 21:26:16,084] INFO   - Consumer 3 ready!
+[main][22 Feb 2018 21:26:16,088] INFO   - ResponseHandler 3 ready!
+[main][22 Feb 2018 21:26:16,088] INFO   - Sleeping for 5 seconds to allow consumers to initialise........
+[Thread-12][22 Feb 2018 21:26:16,375] INFO   - Stats: TPS(avg):0, TPS(last):0, TIME: 1519334776376, sent:0, ok:0, error:0(c/t/d/o: 0/0/12/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:26:17,380] INFO   - Stats: TPS(avg):0, TPS(last):0, TIME: 1519334777381, sent:0, ok:0, error:0(c/t/d/o: 0/0/4563/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:26:18,384] INFO   - Stats: TPS(avg):0, TPS(last):0, TIME: 1519334778385, sent:0, ok:0, error:0(c/t/d/o: 0/0/4798/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:26:19,389] INFO   - Stats: TPS(avg):0, TPS(last):0, TIME: 1519334779389, sent:0, ok:0, error:0(c/t/d/o: 0/0/4798/0), avg_latency:0
+[Thread-12][22 Feb 2018 21:26:20,393] INFO   - Stats: TPS(avg):0, TPS(last):0, TIME: 1519334780394, sent:0, ok:0, error:0(c/t/d/o: 0/0/4798/0), avg_latency:0
+[Thread-14][22 Feb 2018 21:26:21,095] INFO   - Sender 0 started, max: 30000
+[Thread-16][22 Feb 2018 21:26:21,199] INFO   - Sender 1 started, max: 30000
+[Thread-18][22 Feb 2018 21:26:21,295] INFO   - Sender 2 started, max: 30000
+[Thread-12][22 Feb 2018 21:26:21,397] INFO   - Stats: TPS(avg):993, TPS(last):300, TIME: 302, sent:300, ok:300, error:0(c/t/d/o: 0/0/4798/0), avg_latency:6
+[Thread-20][22 Feb 2018 21:26:21,398] INFO   - Sender 3 started, max: 30000
+[Thread-22][22 Feb 2018 21:26:21,499] INFO   - Sender 4 started, max: 30000
+[Thread-24][22 Feb 2018 21:26:21,600] INFO   - Sender 5 started, max: 30000
+[Thread-26][22 Feb 2018 21:26:21,698] INFO   - Sender 6 started, max: 30000
+[Thread-28][22 Feb 2018 21:26:21,797] INFO   - Sender 7 started, max: 30000
+[Thread-30][22 Feb 2018 21:26:21,899] INFO   - Sender 8 started, max: 30000
+[Thread-32][22 Feb 2018 21:26:21,997] INFO   - Sender 9 started, max: 30000
+[Thread-12][22 Feb 2018 21:26:22,401] INFO   - Stats: TPS(avg):995, TPS(last):1000, TIME: 1306, sent:1300, ok:1300, error:0(c/t/d/o: 0/0/4798/0), avg_latency:8
+[Thread-12][22 Feb 2018 21:26:23,405] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 2310, sent:2300, ok:2300, error:0(c/t/d/o: 0/0/4798/0), avg_latency:8
+[Thread-12][22 Feb 2018 21:26:24,406] INFO   - Stats: TPS(avg):997, TPS(last):1000, TIME: 3311, sent:3300, ok:3300, error:0(c/t/d/o: 0/0/4798/0), avg_latency:8
+[Thread-12][22 Feb 2018 21:26:25,411] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 4316, sent:4300, ok:4300, error:0(c/t/d/o: 0/0/4798/0), avg_latency:9
+[Thread-12][22 Feb 2018 21:26:26,416] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 5321, sent:5300, ok:5300, error:0(c/t/d/o: 0/0/4798/0), avg_latency:9
+[Thread-12][22 Feb 2018 21:26:27,421] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 6326, sent:6300, ok:6300, error:0(c/t/d/o: 0/0/4798/0), avg_latency:9
+[Thread-12][22 Feb 2018 21:26:28,425] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 7330, sent:7300, ok:7300, error:0(c/t/d/o: 0/0/4798/0), avg_latency:9
+[Thread-12][22 Feb 2018 21:26:29,430] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 8335, sent:8300, ok:8300, error:0(c/t/d/o: 0/0/4798/0), avg_latency:9
+[Thread-12][22 Feb 2018 21:26:30,432] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 9337, sent:9300, ok:9300, error:0(c/t/d/o: 0/0/4798/0), avg_latency:9
+[Thread-12][22 Feb 2018 21:26:31,436] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 10341, sent:10300, ok:10300, error:0(c/t/d/o: 0/0/4798/0), avg_latency:9
+[Thread-12][22 Feb 2018 21:26:32,439] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 11344, sent:11300, ok:11300, error:0(c/t/d/o: 0/0/4798/0), avg_latency:9
+[Thread-12][22 Feb 2018 21:26:33,445] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 12349, sent:12300, ok:12300, error:0(c/t/d/o: 0/0/4798/0), avg_latency:9
+[Thread-12][22 Feb 2018 21:26:34,450] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 13355, sent:13300, ok:13300, error:0(c/t/d/o: 0/0/4798/0), avg_latency:9
+[Thread-12][22 Feb 2018 21:26:35,454] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 14359, sent:14300, ok:14300, error:0(c/t/d/o: 0/0/4798/0), avg_latency:9
+[Thread-12][22 Feb 2018 21:26:36,458] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 15363, sent:15300, ok:15300, error:0(c/t/d/o: 0/0/4798/0), avg_latency:9
+[Thread-12][22 Feb 2018 21:26:37,463] INFO   - Stats: TPS(avg):996, TPS(last):1000, TIME: 16368, sent:16300, ok:16300, error:0(c/t/d/o: 0/0/4798/0), avg_latency:9
+[Thread-0][22 Feb 2018 21:26:37,895] INFO   - stats1: TPS(avg):0, TPS(last):141100, TIME: 7596674033598, sent:141100, ok:141100, error:0(c/t/d/o: 0/0/100532/0), avg_latency:9
+[Thread-0][22 Feb 2018 21:26:37,895] INFO   - stats: TPS(avg):1000, TPS(last):500, TIME: 16800, sent:16800, ok:16800, error:0(c/t/d/o: 0/0/4798/0), avg_latency:9

@@ -1,0 +1,15 @@
+{
+"event": {
+      "eventKey": "${event}",
+      "eventStatus": "Suspended"
+    },
+    "meta": {
+     "operation": "update",
+     "parents": "${toplevel}",
+     "messageID": "${messageid}",
+     "channel": "OXIRep",
+     "source": "Amelco",
+     "recordModifiedTime": "${recordModifiedTime}"
+   }
+
+}

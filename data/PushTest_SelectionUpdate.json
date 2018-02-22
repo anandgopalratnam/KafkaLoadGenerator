@@ -1,0 +1,14 @@
+{
+"selection": {
+      "selectionKey": "${selection}",
+      "selectionStatus": "${selectionStatus}"
+    },
+    "meta": {
+     "operation": "update",
+     "parents": "${toplevel}:e.${event}:m.${market}",
+     "messageID": "${messageid}",
+     "channel": "OXIRep",
+     "source": "Amelco",
+     "recordModifiedTime": "${recordModifiedTime}"
+   }
+}
