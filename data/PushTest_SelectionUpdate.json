@@ -1,7 +1,7 @@
 {
 "selection": {
       "selectionKey": "${selection}",
-      "selectionStatus": "${selectionStatus}"
+      "selectionStatus": "Active"
     },
     "meta": {
      "operation": "update",

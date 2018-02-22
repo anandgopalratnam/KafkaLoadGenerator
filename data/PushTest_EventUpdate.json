@@ -1,7 +1,7 @@
 {
 "event": {
       "eventKey": "${event}",
-      "eventStatus": "Suspended"
+      "eventStatus": "Active"
     },
     "meta": {
      "operation": "update",
