@@ -112,3 +112,16 @@ From /opt/kafkaloadgenerator execute the following command
 ```
 java -Dconfig=./config -jar kafka-load-generator-0.0.1-SNAPSHOT-jar-with-dependencies.jar ./config/kafkaclient.properties
 ```
+
+If the utility is running fine you will see the following in the logs 
+
+```
+Stats: TPS(avg):1044, TPS(last):1012, TIME: 1341, sent:1400, ok:1400, error:0(c/t/d/o: 0/0/1598/0), avg_latency:7
+Stats: TPS(avg):1024, TPS(last):1000, TIME: 2344, sent:2400, ok:2400, error:0(c/t/d/o: 0/0/1598/0), avg_latency:6
+Stats: TPS(avg):1016, TPS(last):1000, TIME: 3348, sent:3400, ok:3400, error:0(c/t/d/o: 0/0/1598/0), avg_latency:5
+Stats: TPS(avg):1011, TPS(last):1000, TIME: 4352, sent:4400, ok:4400, error:0(c/t/d/o: 0/0/1598/0), avg_latency:5
+Stats: TPS(avg):1008, TPS(last):1000, TIME: 5356, sent:5400, ok:5400, error:0(c/t/d/o: 0/0/1598/0), avg_latency:5
+Stats: TPS(avg):1006, TPS(last):1000, TIME: 6359, sent:6400, ok:6400, error:0(c/t/d/o: 0/0/1598/0), avg_latency:5
+
+which shows the tps and the latency of the internal consumer. 
+```
