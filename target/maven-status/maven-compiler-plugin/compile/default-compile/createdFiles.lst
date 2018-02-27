@@ -6,8 +6,8 @@ com/lc/df/kafka/client/KafkaMsgSender.class
 com/lc/df/kafka/client/Logger.class
 com/lc/df/kafka/client/KafkaMsgConsumer.class
 com/lc/df/kafka/client/ReportHtml.class
-com/lc/df/kafka/client/Utils.class
 com/lc/df/kafka/client/KafkaClient$1.class
+com/lc/df/kafka/client/Utils.class
 com/lc/df/kafka/client/KafkaClientConfig.class
 com/lc/df/kafka/test/KafkaTest$1.class
 com/lc/df/kafka/client/KafkaClient$2.class
