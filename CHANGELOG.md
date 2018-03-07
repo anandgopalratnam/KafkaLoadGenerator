@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.1.1](https://github.com/kaazing/KafkaLoadGenerator/tree/0.1.1) (2018-03-07)
+[Full Changelog](https://github.com/kaazing/KafkaLoadGenerator/compare/0.1.0...0.1.1)
+
+**Merged pull requests:**
+
+- fix divide by zero [\#2](https://github.com/kaazing/KafkaLoadGenerator/pull/2) ([sidda-at-kaazing](https://github.com/sidda-at-kaazing))
+
 ## [0.1.0](https://github.com/kaazing/KafkaLoadGenerator/tree/0.1.0) (2018-03-01)
 **Merged pull requests:**
 
