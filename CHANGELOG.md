@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.1.2](https://github.com/kaazing/KafkaLoadGenerator/tree/0.1.2) (2018-03-07)
+[Full Changelog](https://github.com/kaazing/KafkaLoadGenerator/compare/0.1.1...0.1.2)
+
+**Merged pull requests:**
+
+- Prevent den price from going above PRICE\_DEN\_LIMIT [\#3](https://github.com/kaazing/KafkaLoadGenerator/pull/3) ([robinzimmermann](https://github.com/robinzimmermann))
+
 ## [0.1.1](https://github.com/kaazing/KafkaLoadGenerator/tree/0.1.1) (2018-03-07)
 [Full Changelog](https://github.com/kaazing/KafkaLoadGenerator/compare/0.1.0...0.1.1)
 
