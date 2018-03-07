@@ -1,31 +1,30 @@
 {
-"selection": {
-      "selectionKey": "${selection}",
-      "selectionName": "|Test|",
-      "selectionStatus": "Active",
-      "displayStatus": "Displayed",
-      "displayOrder": -9999,
-      "outcomeMeaningMajorCode": "A",
-      "outcomeMeaningMinorCode": "A",
-      "channel": [
-        "R",
-        "I",
-        "P",
-        "C",
-        "M",
-        "Q",
-        "K"
-      ],
-      "currentPrice": null,
-      "isResulted": "false"
-    },
+  "selection": {
+    "selectionKey": "${selection}",
+    "selectionName": "|Test|",
+    "selectionStatus": "Active",
+    "displayStatus": "Displayed",
+    "displayOrder": -9999,
+    "outcomeMeaningMajorCode": "A",
+    "outcomeMeaningMinorCode": "A",
+    "channel": [
+      "R",
+      "I",
+      "P",
+      "C",
+      "M",
+      "Q",
+      "K"
+    ],
+    "currentPrice": null,
+    "isResulted": "false",
     "meta": {
-     "operation": "create",
-     "parents": "${toplevel}:e.${event}:m.${market}",
-     "messageID": "${messageid}",
-     "channel": "OXIRep",
-     "source": "Amelco",
-     "recordModifiedTime": "${recordModifiedTime}"
-   }
-
+      "operation": "create",
+      "parents": "${toplevel}:e.${event}:m.${market}",
+      "messageID": "${messageid}",
+      "channel": "OXIRep",
+      "source": "Amelco",
+      "recordModifiedTime": "${recordModifiedTime}"
+    }
+  }
 }

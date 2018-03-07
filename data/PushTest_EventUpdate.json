@@ -1,15 +1,14 @@
 {
-"event": {
-      "eventKey": "${event}",
-      "eventStatus": "Active"
-    },
+  "event": {
+    "eventKey": "${event}",
+    "eventStatus": "Active",
     "meta": {
-     "operation": "update",
-     "parents": "${toplevel}",
-     "messageID": "${messageid}",
-     "channel": "OXIRep",
-     "source": "Amelco",
-     "recordModifiedTime": "${recordModifiedTime}"
-   }
-
+      "operation": "update",
+      "parents": "${toplevel}",
+      "messageID": "${messageid}",
+      "channel": "OXIRep",
+      "source": "Amelco",
+      "recordModifiedTime": "${recordModifiedTime}"
+    }
+  }
 }
