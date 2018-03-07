@@ -1,16 +1,15 @@
 {
-"market": {
-      "marketKey": "${market}",
-      "isResulted": "true",
-      "isSettled": "true"
-   },
+  "market": {
+    "marketKey": "${market}",
+    "isResulted": "true",
+    "isSettled": "true",
     "meta": {
-     "operation": "update",
-     "parents": "${toplevel}:e.${event}",
-     "messageID": "${messageid}",
-     "channel": "OXIRep",
-     "source": "Amelco",
-     "recordModifiedTime": "${recordModifiedTime}"
-   }
-
+      "operation": "update",
+      "parents": "${toplevel}:e.${event}",
+      "messageID": "${messageid}",
+      "channel": "OXIRep",
+      "source": "Amelco",
+      "recordModifiedTime": "${recordModifiedTime}"
+    }
+  }
 }
