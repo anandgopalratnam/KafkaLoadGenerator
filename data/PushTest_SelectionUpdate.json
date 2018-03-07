@@ -1,14 +1,14 @@
 {
-"selection": {
-      "selectionKey": "${selection}",
-      "selectionStatus": "Active"
-    },
+  "selection": {
+    "selectionKey": "${selection}",
+    "selectionStatus": "Active",
     "meta": {
-     "operation": "update",
-     "parents": "${toplevel}:e.${event}:m.${market}",
-     "messageID": "${messageid}",
-     "channel": "OXIRep",
-     "source": "Amelco",
-     "recordModifiedTime": "${recordModifiedTime}"
-   }
+      "operation": "update",
+      "parents": "${toplevel}:e.${event}:m.${market}",
+      "messageID": "${messageid}",
+      "channel": "OXIRep",
+      "source": "Amelco",
+      "recordModifiedTime": "${recordModifiedTime}"
+    }
+  }
 }

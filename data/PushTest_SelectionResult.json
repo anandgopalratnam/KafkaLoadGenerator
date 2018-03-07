@@ -1,16 +1,15 @@
 {
-"selection": {
-      "selectionKey": "${selection}",
-      "isResulted": "true",
-      "isSettled" : "true"
-   },
+  "selection": {
+    "selectionKey": "${selection}",
+    "isResulted": "true",
+    "isSettled": "true",
     "meta": {
-     "operation": "update",
-     "parents": "${toplevel}:e.${event}",
-     "messageID": "${messageid}",
-     "channel": "OXIRep",
-     "source": "Amelco",
-     "recordModifiedTime": "${recordModifiedTime}"
-   }
-
+      "operation": "update",
+      "parents": "${toplevel}:e.${event}",
+      "messageID": "${messageid}",
+      "channel": "OXIRep",
+      "source": "Amelco",
+      "recordModifiedTime": "${recordModifiedTime}"
+    }
+  }
 }

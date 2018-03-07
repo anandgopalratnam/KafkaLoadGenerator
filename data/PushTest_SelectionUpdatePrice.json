@@ -1,18 +1,23 @@
 {
-"selection": {
-      "selectionKey": "${selection}",
-      "currentPrice": {
-        "decimalPrice": 3333.33,
-        "numPrice": -1111,
-        "denPrice": -2222
-      }
+  "selection": {
+    "selectionKey": "${selection}",
+    "prices": {
+      "price": [
+        {
+          "selectionPriceType": "LP",
+          "decimalPrice": 3333.33,
+          "numPrice": -1111,
+          "denPrice": -2222
+        }
+      ]
     },
     "meta": {
-     "operation": "update",
-     "parents": "${toplevel}:e.${event}:m.${market}",
-     "messageID": "${messageid}",
-     "channel": "OXIRep",
-     "source": "Amelco",
-     "recordModifiedTime": "${recordModifiedTime}"
-   }
+      "operation": "update",
+      "parents": "${toplevel}:e.${event}:m.${market}",
+      "messageID": "${messageid}",
+      "channel": "OXIRep",
+      "source": "Amelco",
+      "recordModifiedTime": "${recordModifiedTime}"
+    }
+  }
 }
