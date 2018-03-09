@@ -15,5 +15,5 @@ COPY data/* $WORKDIR/data/
 COPY . $WORKDIR
 RUN mvn clean install -DskipTests
 
-ENTRYPOINT java -Dconfig=./config -jar kafka-load-generator-0.0.1-SNAPSHOT-jar-with-dependencies.jar ./config/kafkaclient.properties
+ENTRYPOINT java -Dconfig=./config -jar target/kafka-load-generator-0.0.1-SNAPSHOT-jar-with-dependencies.jar ./config/kafkaclient.properties
 
