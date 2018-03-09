@@ -10,9 +10,10 @@ WORKDIR  $WORKDIR
 # Build kafka-streams
 RUN mkdir -p config
 RUN mkdir -p data
-COPY target/kafka-load-generator-0.0.1-SNAPSHOT-jar-with-dependencies.jar $WORKDIR
 COPY config/* $WORKDIR/config/
 COPY data/* $WORKDIR/data/
+COPY . $WORKDIR
+RUN mvn clean install -DskipTests
 
 ENTRYPOINT java -Dconfig=./config -jar kafka-load-generator-0.0.1-SNAPSHOT-jar-with-dependencies.jar ./config/kafkaclient.properties
 
