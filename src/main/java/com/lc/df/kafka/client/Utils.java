@@ -237,15 +237,16 @@ public class Utils
 			String marketID = marketIDPrefixString + eventID;
 			String selectionIDPrefixString = Integer.toString(currentSelectionPrefixID);
 			String selectionID = selectionIDPrefixString + marketID;
-			if (currentSelectionPrefixID == KafkaClientConfig.selectionid_prefix_max)
+			currentSelectionPrefixID++;
+			if (currentSelectionPrefixID > KafkaClientConfig.selectionid_prefix_max)
 			{
-				currentMarketPrefixID = -1;
 				currentSelectionPrefixID = -1;
-				currentEventID++;
-			}
-			else
-			{
-				currentSelectionPrefixID++;
+				currentMarketPrefixID++;
+				if (currentMarketPrefixID > KafkaClientConfig.marketid_prefix_max)
+				{
+					currentMarketPrefixID = -1;
+					currentEventID++;
+				}
 			}
 			createsCompleted = currentEventID > KafkaClientConfig.eventid_max;
 			return new KafkaPayload(eventID,"selection-create",getNewPayload(SEL_CREATE_PAYLOAD, eventID, marketID, selectionID,marketIDPrefixString,selectionIDPrefixString, correlationId));
