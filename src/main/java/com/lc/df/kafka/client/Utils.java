@@ -97,7 +97,7 @@ public class Utils
 			if (selectionid != null)
 			{
 				int num = getRandomIntInRange(PRICE_NUM_LIMIT);
-				int den = getRandomIntInRange(PRICE_DEN_LIMIT);
+				int den = getRandomIntInRange(PRICE_DEN_LIMIT - 1) + 1; // prevent denominator of zero
 				double decimal = 1 + ((double)num/(double)den);
 				DecimalFormat f = new DecimalFormat("##.00");
 				pl = payload.replaceAll("\\$\\{selection\\}", selectionid)
@@ -237,15 +237,16 @@ public class Utils
 			String marketID = marketIDPrefixString + eventID;
 			String selectionIDPrefixString = Integer.toString(currentSelectionPrefixID);
 			String selectionID = selectionIDPrefixString + marketID;
-			if (currentSelectionPrefixID == KafkaClientConfig.selectionid_prefix_max)
+			currentSelectionPrefixID++;
+			if (currentSelectionPrefixID > KafkaClientConfig.selectionid_prefix_max)
 			{
-				currentMarketPrefixID = -1;
 				currentSelectionPrefixID = -1;
-				currentEventID++;
-			}
-			else
-			{
-				currentSelectionPrefixID++;
+				currentMarketPrefixID++;
+				if (currentMarketPrefixID > KafkaClientConfig.marketid_prefix_max)
+				{
+					currentMarketPrefixID = -1;
+					currentEventID++;
+				}
 			}
 			createsCompleted = currentEventID > KafkaClientConfig.eventid_max;
 			return new KafkaPayload(eventID,"selection-create",getNewPayload(SEL_CREATE_PAYLOAD, eventID, marketID, selectionID,marketIDPrefixString,selectionIDPrefixString, correlationId));
@@ -308,6 +309,30 @@ public class Utils
 
 		return null;
 	}
+    private static long getRandomLongId(long min, long max)
+    {
+        if (min < max)
+        {
+            return ThreadLocalRandom.current().nextLong(min, max);
+        }
+        else
+        {
+            // Handle the case where the min and the max are the same.
+            return min;
+        }
+    }
+    private static int getRandomIntId(int min, int max)
+    {
+        if (min < max)
+        {
+            return ThreadLocalRandom.current().nextInt(min, max);
+        }
+        else
+        {
+            // Handle the case where the min and the max are the same.
+            return min;
+        }
+    }
 	public static KafkaPayload getRandomPayload(String correlationId)
 	{
 		if (resultsComplete){
@@ -331,15 +356,15 @@ public class Utils
 				String payload = kPayload.getPayload();
 				if ("E".equals(kPayload.getType()))
 				{
-					long eID = ThreadLocalRandom.current().nextLong(KafkaClientConfig.eventid_min, KafkaClientConfig.eventid_max);
+				    long eID = getRandomLongId(KafkaClientConfig.eventid_min, KafkaClientConfig.eventid_max);
 					String eventKey = Long.toString(eID);
 					String newPayload = getNewPayload(payload, eventKey, null,null,null,null, correlationId);
 					return new KafkaPayload(eventKey,"update-event",newPayload);
 				}
 				if ("M".equals(kPayload.getType()))
 				{
-					long eID = ThreadLocalRandom.current().nextLong(KafkaClientConfig.eventid_min, KafkaClientConfig.eventid_max);
-					int mID = ThreadLocalRandom.current().nextInt(KafkaClientConfig.marketid_prefix_min, KafkaClientConfig.marketid_prefix_max);
+				    long eID = getRandomLongId(KafkaClientConfig.eventid_min, KafkaClientConfig.eventid_max);
+				    int mID = getRandomIntId(KafkaClientConfig.marketid_prefix_min, KafkaClientConfig.marketid_prefix_max);
 					String eventKey = Long.toString(eID);
 					String marketKey = Integer.toString(mID) + eventKey;
 					String newPayload = getNewPayload(payload, eventKey, marketKey,null,null,null, correlationId);
@@ -347,9 +372,9 @@ public class Utils
 				}
 				if ("S".equals(kPayload.getType()))
 				{
-					long eID = ThreadLocalRandom.current().nextLong(KafkaClientConfig.eventid_min, KafkaClientConfig.eventid_max);
-					int mID = ThreadLocalRandom.current().nextInt(KafkaClientConfig.marketid_prefix_min, KafkaClientConfig.marketid_prefix_max);
-					int sID = ThreadLocalRandom.current().nextInt(KafkaClientConfig.selectionid_prefix_min, KafkaClientConfig.selectionid_prefix_max);
+				    long eID = getRandomLongId(KafkaClientConfig.eventid_min, KafkaClientConfig.eventid_max);
+				    int mID = getRandomIntId(KafkaClientConfig.marketid_prefix_min, KafkaClientConfig.marketid_prefix_max);
+				    int sID = getRandomIntId(KafkaClientConfig.selectionid_prefix_min, KafkaClientConfig.selectionid_prefix_max);
 					String eventKey = Long.toString(eID);
 					String marketKey = Integer.toString(mID) + eventKey;
 					String selectionKey = Integer.toString(sID) + marketKey;
