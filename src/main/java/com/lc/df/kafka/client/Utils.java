@@ -97,7 +97,7 @@ public class Utils
 			if (selectionid != null)
 			{
 				int num = getRandomIntInRange(PRICE_NUM_LIMIT);
-				int den = getRandomIntInRange(PRICE_DEN_LIMIT);
+				int den = getRandomIntInRange(PRICE_DEN_LIMIT - 1) + 1; //prevent divide by zero
 				double decimal = 1 + ((double)num/(double)den);
 				DecimalFormat f = new DecimalFormat("##.00");
 				pl = payload.replaceAll("\\$\\{selection\\}", selectionid)
