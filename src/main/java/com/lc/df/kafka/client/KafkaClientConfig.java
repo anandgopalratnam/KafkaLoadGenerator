@@ -105,7 +105,15 @@ public class KafkaClientConfig {
 			}
 			max_records_per_file = Long.valueOf(maxRec).longValue();
 
-			kafka_bootstrap_servers = prop.getProperty("kafka.bootstrap.servers");
+        		// Use bootstrap server info from the environment var if available
+		        kafka_bootstrap_servers = System.getenv("KAFKA_BOOTSTRAP_SERVERS");
+		        if (kafka_bootstrap_servers != null) {
+		           System.out.printf("Overriding bootstrap.servers: %s\n", kafka_bootstrap_servers );
+		        }
+			else {
+			   kafka_bootstrap_servers = prop.getProperty("kafka.bootstrap.servers");
+		        }
+
 			kafka_topic = prop.getProperty("kafka.topic");
 			kafka_compressiontype = prop.getProperty("kafka.compressiontype");	
 			kafka_listener_groupName = prop.getProperty("kafka.listener.groupName");
