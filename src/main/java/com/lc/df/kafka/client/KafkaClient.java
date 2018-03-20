@@ -62,7 +62,7 @@ public class KafkaClient implements Runnable
 			e.printStackTrace();
 		}
 
-		com.lc.df.kafka.client.Logger.logInfoMessage("Printing Final Stats: ........" + Kpi.getStats());
+		com.lc.df.kafka.client.Logger.logInfoMessage("Printing Final Stats: ........" + Kpi.getStats(true));
 	}
 
 	private void prepareConnectivity() throws Exception
