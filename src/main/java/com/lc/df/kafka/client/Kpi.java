@@ -5,10 +5,13 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Set;
+import java.util.stream.Stream;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
@@ -23,6 +26,7 @@ public class Kpi {
 	private static LinkedList<ReportHtml> reportHTML = new LinkedList<ReportHtml>();
 
 	public static int total_sent = 0;
+	public static Map<String, Integer> messageTypeCount = new HashMap<String, Integer>();
 	public static int total_success = 0;
 	public static int total_error = 0;
 	public static int total_error_timeout = 0;
@@ -77,11 +81,20 @@ public class Kpi {
 		log = KafkaClient.getLogger();
 		this.correlation = correlation;
 	}
-	public void setSent() {
+	public void setSent(String messageType) {
 		sent = true;
 		timeSent = System.currentTimeMillis();
 		synchronized (lock_sent) {
 			total_sent++;
+			Integer count = messageTypeCount.get(messageType);
+			if (count == null)
+			{
+			    messageTypeCount.put(messageType, 1);
+			}
+			else
+			{
+			    messageTypeCount.put(messageType, count + 1);
+			}
 		}
 	}
 
@@ -183,6 +196,9 @@ public class Kpi {
 	}
 
 	public static String getStats() {
+		return getStats(false);
+	}
+	public static String getStats(boolean includeMessageCounts) {
 		long stopWatch = stopSending;
 
 		// if stopWatch = 0 it means threads are keep sending requests.
@@ -220,10 +236,31 @@ public class Kpi {
 		KafkaClient.total_error_unknown = KafkaClient.total_error_unknown + total_error_unknown;
 		KafkaClient.avg_latency = KafkaClient.avg_latency + avg_latency;
 
-		return "TPS(avg):" + tps_avg + ", TPS(last):" + tps_last + ", TIME: " + sending_time + ", sent:" + total_sent
-				+ ", ok:" + total_success + ", error:" + total_error + "(c/t/d/o: " + total_error_connect + "/"
-				+ total_error_timeout + "/" + total_discarded + "/" + total_error_unknown + "), avg_latency:"
-				+ avg_latency;
+		String returnStr = "TPS(avg):" + tps_avg + ", TPS(last):" + tps_last + ", TIME: " + sending_time + ", sent:" + total_sent
+			+ ", ok:" + total_success + ", error:" + total_error + "(c/t/d/o: " + total_error_connect + "/"
+			+ total_error_timeout + "/" + total_discarded + "/" + total_error_unknown + "), avg_latency:"
+			+ avg_latency;
+
+		// If requested, add counts of each different message type. They are sorted in alphabetical
+		// order for convenience.
+		if (includeMessageCounts)
+		{
+			Stream<Map.Entry<String, Integer>> sorted = messageTypeCount.entrySet().stream()
+				.sorted(Map.Entry.comparingByKey());
+			Iterator<Map.Entry<String, Integer>> iter = sorted.iterator();
+			returnStr += "\n  Message type counts:";
+			while (iter.hasNext()) {
+				Map.Entry<String, Integer> e = iter.next();
+				returnStr += String.format("\n    %s=%d", e.getKey(), e.getValue());
+			}
+			Integer selectionUpdateCounts = messageTypeCount.get("selection-update");
+			if (selectionUpdateCounts != null)
+			{
+				returnStr += String.format("\n  Percentage of messages for selection updates: %.1f%%", (float) selectionUpdateCounts / total_sent * 100);
+			}
+		}
+
+		return returnStr;
 	}
 
 	public long getLatency() {

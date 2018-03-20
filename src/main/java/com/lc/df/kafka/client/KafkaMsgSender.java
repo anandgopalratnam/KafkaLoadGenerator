@@ -88,7 +88,7 @@ public class KafkaMsgSender extends Thread {
 
 				sendRequest(eventKey, newPayload);
 
-				stats.setSent();
+				stats.setSent(pl.getType());
 
 				spent = System.currentTimeMillis() - start;
 				count++;

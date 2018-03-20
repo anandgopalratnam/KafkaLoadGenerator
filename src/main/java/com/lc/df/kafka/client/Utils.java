@@ -359,7 +359,7 @@ public class Utils
 				    long eID = getRandomLongId(KafkaClientConfig.eventid_min, KafkaClientConfig.eventid_max);
 					String eventKey = Long.toString(eID);
 					String newPayload = getNewPayload(payload, eventKey, null,null,null,null, correlationId);
-					return new KafkaPayload(eventKey,"update-event",newPayload);
+					return new KafkaPayload(eventKey,"event-update",newPayload);
 				}
 				if ("M".equals(kPayload.getType()))
 				{
@@ -368,7 +368,7 @@ public class Utils
 					String eventKey = Long.toString(eID);
 					String marketKey = Integer.toString(mID) + eventKey;
 					String newPayload = getNewPayload(payload, eventKey, marketKey,null,null,null, correlationId);
-					return new KafkaPayload(eventKey,"update-market",newPayload);
+					return new KafkaPayload(eventKey,"market-update",newPayload);
 				}
 				if ("S".equals(kPayload.getType()))
 				{
@@ -379,7 +379,7 @@ public class Utils
 					String marketKey = Integer.toString(mID) + eventKey;
 					String selectionKey = Integer.toString(sID) + marketKey;
 					String newPayload = getNewPayload(payload, eventKey, marketKey,selectionKey,null,null, correlationId);
-					return new KafkaPayload(eventKey,"update-selection",newPayload);
+					return new KafkaPayload(eventKey,"selection-update",newPayload);
 				}
 			}			
 		}
