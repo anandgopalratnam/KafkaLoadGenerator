@@ -4,13 +4,15 @@
     "isEventResulted": "true",
     "isEventFinished": "true",
     "isEventSettled": "true",
+    "displayStatus" : "NotDisplayed",
     "meta": {
       "operation": "update",
       "parents": "${toplevel}",
       "messageID": "${messageid}",
       "channel": "OXIRep",
       "source": "Amelco",
-      "recordModifiedTime": "${recordModifiedTime}"
+      "recordModifiedTime": "${recordModifiedTime}",
+      "messageTimestamp": "${messageTimestamp}"
     }
   }
 }

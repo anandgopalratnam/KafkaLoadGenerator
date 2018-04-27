@@ -3,13 +3,15 @@
     "selectionKey": "${selection}",
     "isResulted": "true",
     "isSettled": "true",
+    "displayStatus" : "NotDisplayed",
     "meta": {
       "operation": "update",
       "parents": "${toplevel}:e.${event}",
       "messageID": "${messageid}",
       "channel": "OXIRep",
       "source": "Amelco",
-      "recordModifiedTime": "${recordModifiedTime}"
+      "recordModifiedTime": "${recordModifiedTime}",
+      "messageTimestamp": "${messageTimestamp}"
     }
   }
 }

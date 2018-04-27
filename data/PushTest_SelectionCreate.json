@@ -1,7 +1,7 @@
 {
   "selection": {
     "selectionKey": "${selection}",
-    "selectionName": "|Test|",
+    "selectionName": "${selection} |Test|",
     "selectionStatus": "Active",
     "displayStatus": "Displayed",
     "displayOrder": -9999,
@@ -24,7 +24,8 @@
       "messageID": "${messageid}",
       "channel": "OXIRep",
       "source": "Amelco",
-      "recordModifiedTime": "${recordModifiedTime}"
+      "recordModifiedTime": "${recordModifiedTime}",
+      "messageTimestamp": "${messageTimestamp}"
     }
   }
 }

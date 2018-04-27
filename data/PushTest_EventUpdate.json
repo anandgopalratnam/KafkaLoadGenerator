@@ -8,7 +8,8 @@
       "messageID": "${messageid}",
       "channel": "OXIRep",
       "source": "Amelco",
-      "recordModifiedTime": "${recordModifiedTime}"
+      "recordModifiedTime": "${recordModifiedTime}",
+      "messageTimestamp": "${messageTimestamp}"
     }
   }
 }

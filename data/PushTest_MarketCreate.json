@@ -2,7 +2,7 @@
   "market": {
     "marketKey": "${market}",
     "marketName": "|Match Result|",
-    "marketStatus": "Suspended",
+    "marketStatus": "Active",
     "displayStatus": "Displayed",
     "displayOrder": -9999,
     "isMarketBIR": "false",
@@ -39,7 +39,8 @@
       "messageID": "${messageid}",
       "channel": "OXIRep",
       "source": "Amelco",
-      "recordModifiedTime": "${recordModifiedTime}"
+      "recordModifiedTime": "${recordModifiedTime}",
+      "messageTimestamp": "${messageTimestamp}"
     }
   }
 }
