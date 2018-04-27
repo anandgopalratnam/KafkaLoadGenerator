@@ -51,6 +51,8 @@ public class KafkaClientConfig {
 	public static int selectionid_prefix_max ;
 	
 	public static int selection_priceupdate_multiplier ;
+
+	public static String test_type ;
 	
 	public static LinkedList<String> topLevelList = new LinkedList<String>() ;
 	public KafkaClientConfig(String propFile) {
@@ -72,6 +74,7 @@ public class KafkaClientConfig {
 			client_maxtime = Integer
 					.valueOf(prop.getProperty("client.maxtime")).intValue();
 
+			test_type = prop.getProperty("client.testtype");
 			payload_size = Integer.valueOf(
 					prop.getProperty("client.producer.payload.size.bytes"))
 					.intValue();

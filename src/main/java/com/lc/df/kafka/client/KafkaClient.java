@@ -226,12 +226,22 @@ public class KafkaClient implements Runnable
 				
 				@Override
 				public void run() {
+					boolean resultStarted = false;
+					boolean inplayStarted = false;
 					while (true) {
 						long elapsedTime = System.currentTimeMillis() - startTime;
 						if (elapsedTime > (KafkaClientConfig.result_seconds * 1000)) {
+							if (!resultStarted){
+								com.lc.df.kafka.client.Logger.logInfoMessage("Starting  Results.....");
+							}
 							Utils.startResults();
+							resultStarted = true;
 						} else if (elapsedTime > (KafkaClientConfig.inplay_seconds * 1000)) {
+							if (!inplayStarted){
+								com.lc.df.kafka.client.Logger.logInfoMessage("Setting InPlay.....");
+							}
 							Utils.startInplay();
+							inplayStarted = true;
 						} 
 						try {
 							Thread.sleep(1000);

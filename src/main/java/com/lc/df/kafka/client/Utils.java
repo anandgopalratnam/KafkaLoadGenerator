@@ -1,19 +1,23 @@
 package com.lc.df.kafka.client;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.filefilter.FileFilterUtils;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.DecimalFormat;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
-
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.io.filefilter.FileFilterUtils;
 
 public class Utils
 {
@@ -47,6 +51,12 @@ public class Utils
 		return readFile(new File(file));
 	}
 
+	public static final String eventDateTime ;
+
+	static{
+	    eventDateTime = ZonedDateTime.now(ZoneId.of("UTC")).format(DateTimeFormatter.ofPattern
+                ("yyyy-MM-dd'T'HH:mm:ss'Z'"));
+    }
 	public static String readFile(File file) {
 		try {
 			return FileUtils.readFileToString(file);
@@ -114,8 +124,11 @@ public class Utils
 			}
 			return 	pl.replaceAll("\\$\\{toplevel\\}", toplevel)
 					.replaceAll("\\$\\{event\\}", eventid)
+                    .replaceAll("\\$\\{eventDateTime\\}",eventDateTime)
 					.replaceAll("-9999", eventid)
-					.replaceAll("\\$\\{recordModifiedTime\\}", currentTimeStamp)
+					.replaceAll("\\$\\{recordModifiedTime\\}", ZonedDateTime.now(ZoneId.of("UTC")).format(DateTimeFormatter.ofPattern
+                            ("yyyy-MM-dd'T'HH:mm:ss'Z'")))
+                    .replaceAll("\\$\\{messageTimestamp\\}",currentTimeStamp)
 					.replaceAll("\\$\\{messageid\\}",messageid);
 
 		} catch (Exception e) {
@@ -262,7 +275,11 @@ public class Utils
 		}
 		String eventID = Long.toString(currentEventID++);
 		inplayComplete = currentEventID > KafkaClientConfig.eventid_max;
-		return new KafkaPayload(eventID,"event-inplay",getNewPayload(EVT_INPLAY_PAYLOAD, eventID, null, null,null,null, correlationId));
+		KafkaPayload kP = new KafkaPayload(eventID,"event-inplay",getNewPayload(EVT_INPLAY_PAYLOAD, eventID, null,
+			null,null,
+			null, correlationId));
+		Logger.logInfoMessage("Inplay Payload ["+kP+"]");
+		return kP;
 	}
 	private synchronized static KafkaPayload getResultsPayload(String correlationId)
 	{
@@ -335,6 +352,12 @@ public class Utils
     }
 	public static KafkaPayload getRandomPayload(String correlationId)
 	{
+//		Logger.logInfoMessage("Results Completed ["+resultsComplete+"] Creates Completed ["+createsCompleted+"] " +
+//				"SendInplay ["+sendInplay+"] InPlayCompleted ["+inplayComplete+"] Send Results ["+sendResults+"] " +
+//				"Results Completed ["+resultsComplete+"]");
+        if (PAYLOAD_LIST.size() == 1){
+            return getGenericPayload();
+        }
 		if (resultsComplete){
 			return new KafkaPayload("STOP","STOP", "STOP");
 		}
@@ -385,6 +408,10 @@ public class Utils
 		}
 		return null;
 	}
+	public static KafkaPayload getGenericPayload(){
+	    PayloadConfig config = PAYLOAD_LIST.get(0);
+	    return new KafkaPayload(UUID.randomUUID().toString(),"generic",config.getPayload());
+    }
 	public static synchronized void startInplay(){
 		if (!sendInplay){
 			sendInplay = true;
@@ -401,4 +428,5 @@ public class Utils
 			currentSelectionPrefixID = KafkaClientConfig.selectionid_prefix_min;
 		}
 	}
+
 }

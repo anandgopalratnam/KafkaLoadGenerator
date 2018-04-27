@@ -27,5 +27,10 @@ public class KafkaPayload {
 	public void setType(String type) {
 		this.type = type;
 	}
-	
+
+	@Override
+	public String toString() {
+		return new StringBuilder().append("Key :[").append(key).append("] Value [").append(value).append("] Type [")
+				.append(type).append("]").toString();
+	}
 }
