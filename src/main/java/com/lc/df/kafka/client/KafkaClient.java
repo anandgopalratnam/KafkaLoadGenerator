@@ -1,5 +1,6 @@
 package com.lc.df.kafka.client;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.CountDownLatch;
@@ -61,7 +62,7 @@ public class KafkaClient implements Runnable
 			e.printStackTrace();
 		}
 
-		com.lc.df.kafka.client.Logger.logInfoMessage("Printing Final Stats: ........" + Kpi.getStats());
+		com.lc.df.kafka.client.Logger.logInfoMessage("Printing Final Stats: ........" + Kpi.getStats(true));
 	}
 
 	private void prepareConnectivity() throws Exception
@@ -176,6 +177,7 @@ public class KafkaClient implements Runnable
 		Kpi.total_error_timeout = 0;
 		Kpi.total_error_unknown = 0;
 		Kpi.total_sent = 0;
+		Kpi.messageTypeCount = new HashMap<String, Integer>();
 		Kpi.total_success = 0;
 		Kpi.startSending = KafkaMsgSender.start_Time;
 		Kpi.stopSending = KafkaMsgSender.end_Time;
@@ -213,7 +215,6 @@ public class KafkaClient implements Runnable
 				t3 = t1 / t2;
 				long tps_last = Math.round(t3);
 				com.lc.df.kafka.client.Logger.logInfoMessage("stats1: " + "TPS(avg):" + tps_avg + ", TPS(last):" + tps_last + ", TIME: " + sending_time + ", sent:" + total_sent + ", ok:" + total_success + ", error:" + total_error + "(c/t/d/o: " + total_error_connect + "/" + total_error_timeout + "/" + total_discarded + "/" + total_error_unknown +"), avg_latency:" + avg_latency);
-				com.lc.df.kafka.client.Logger.logInfoMessage("stats: " + Kpi.getStats());
 			}
 		 });
 
